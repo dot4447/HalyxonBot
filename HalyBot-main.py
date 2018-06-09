@@ -6,7 +6,6 @@ import os.path
 import datetime
 import time
 import asyncio
-from shutil import copyfile
 import json
 import os
 import copy
