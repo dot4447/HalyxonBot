@@ -18,7 +18,6 @@ import aiohttp
 
 
 client = Bot("d;")
-TOKEN = "NDU0OTg3MDUwNjI2NTgwNDgw.Df1q6w.e99bENzeK5NfPYo4V7UoyjEP5cE"
 
 @client.event
 async def on_ready():
