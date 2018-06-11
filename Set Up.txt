@@ -1,0 +1,15 @@
+Download the latest version of Python.
+Open CMD on your PC and install all the non-default packages using the pip command.
+[Command - "pip install _______"]
+Download the code from GitHUb.(You probably already did this but oh well)
+Open HalyxonBot-main.py using Python IDLE unless you have a better IDE, which I don't.
+Open https://discordapp.com/developers/applications/me/create
+Select a name, a description and icon(You can change this later).
+Now, if you scroll down, you'll see a create bot user option. DO IT. click on reveal token DO NOT TELL YOUR TOKEN TO ANYONE. 
+Next, on the top you'll see a client ID, copy this and search discord permissions calculator, this select the permissions you want you bot to have, paste your ID where it needs to and there'll be a link given to you, visit this link and you'll be able to add the bot on any server you have admin perms on.
+If you want the bot to run only at certain times, remove the last three lines and replace the with -
+client.run('yourtoken')
+now press F5 and BOOM your bot's online to get it offline, close Python SHell(it open on its own when you run your bot)
+When you want it oline for all the time, the xp system won't work unless you use a paid VPS since the free one I reccomend doesnt support json.(too bad lol)
+Create a heroku account at their website, create a new app, open the deploy tab and connect it to this GitHub.
+Open the setting tab and click on reveal config vars. This is where you use your bot's token, create a new var and name it TOKEN. paste yor token into its value and press deploy from the deploy tab.
