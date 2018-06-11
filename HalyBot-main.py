@@ -35,38 +35,38 @@ async def ping():
     ping1.add_field(name = 'Pong', value = "{} seconds".format(ping2)   )
     await client.edit_message(ping3, embed = ping1)
 
-@client.event
-async def on_message(message):
-    if not message.author.bot:
-        member_add_exp(message.author.name, 3)
-    await client.process_commands(message)
+#@client.event
+#async def on_message(message):
+#    if not message.author.bot:
+#        member_add_exp(message.author.name, 3)
+#    await client.process_commands(message)
 
 
-def member_add_exp(member_name: int, exp: int):
-    if os.path.isfile("exp.json"):
-        try:
-            with open('exp.json', 'r') as f:
-                members = json.load(f)
-                members[member_name]['exp'] += exp
-                with open('exp.json', 'w') as f:
-                    json.dump(members, f, indent=2)
-        except KeyError:
-            with open('exp.json', 'r') as f:
-                members = json.load(fp)
-                members[member_name] = {}
-                members[member_name]['exp'] = exp
-                with open('exp.json', 'w') as fp:
-                    json.dump(members, f, indent=2)
-        
-    else:
-        members = {member_name: {}}
-        members[member_name]['exp'] = exp
-        with open('exp.json', 'w') as f:
-            json.dump(members, f, indent=2)
+#def member_add_exp(member_name: int, exp: int):
+#    if os.path.isfile("exp.json"):
+#        try:
+#            with open('exp.json', 'r') as f:
+#                members = json.load(f)
+#                members[member_name]['exp'] += exp
+#                with open('exp.json', 'w') as f:
+#                    json.dump(members, f, indent=2)
+#        except KeyError:
+#            with open('exp.json', 'r') as f:
+#                members = json.load(fp)
+#                members[member_name] = {}
+#                members[member_name]['exp'] = exp
+#                with open('exp.json', 'w') as fp:
+#                    json.dump(members, f, indent=2)
+#
+#    else:
+#        members = {member_name: {}}
+#        members[member_name]['exp'] = exp
+#        with open('exp.json', 'w') as f:
+#            json.dump(members, f, indent=2)
         
             
-@client.command(pass_context=True)
-async def exp(ctx, *, user : discord.Member = None):
+#@client.command(pass_context=True)
+#async def exp(ctx, *, user : discord.Member = None):
     if not user:
         user = ctx.message.author
     
