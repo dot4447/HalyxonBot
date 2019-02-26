@@ -741,4 +741,4 @@ async def dog(ctx):
                 await client.say(embed = embed)
 
 #Run
-client.run("NDU1MDkxOTI1NDM1OTQwODY0.D0rgsQ.6It2hnmdP02OK7ovPfQLETTQ2ns")
+client.run("token")
