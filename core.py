@@ -741,4 +741,6 @@ async def dog(ctx):
                 await client.say(embed = embed)
 
 #Run
-client.run("token")
+if not os.environ.get('TOKEN'):
+    print("no token found!")
+client.run(os.environ.get('TOKEN').strip('"'))
